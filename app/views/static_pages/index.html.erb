@@ -1,2 +1,32 @@
-<h1>StaticPages index</h1>
-<p><%= @message %></p>
+<div class="relative inline-block text-left" data-controller="dropdown">
+  <!-- Button -->
+  <button 
+          class="inline-flex justify-center items-center"
+          data-dropdown-target="button"
+          data-action="click->dropdown#toggle keydown.esc->dropdown#toggle click@window->dropdown#hide" 
+          aria-haspopup="true" aria-expanded="true"> 
+
+
+
+            Options
+    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" data-dropdown-target="button"
+          data-action="click->dropdown#toggle keydown.esc->dropdown#toggle click@window->dropdown#hide" tabindex="0"
+          aria-haspopup="true" aria-expanded="true">
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div class="absolute right-0 origin-top-right w-48 shadow-xl rounded z-1 hidden"
+       data-dropdown-target="menu">
+    <div class="py-1" role="none">
+      <!-- Menu items -->
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+      <form method="POST" action="#" role="none">
+        <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+      </form>
+    </div>
+  </div>
+</div>
